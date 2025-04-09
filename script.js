@@ -8,18 +8,21 @@ let url = document.getElementById('url')
 
 button.addEventListener("click" , () => {
 
-    if(!(Name.value == "" || year.value == "")){
-        url.append(`?name=${Name.value}&year=${year.value}`)
+    if(Name.value == "" && year.value == ""){
+        url.innerHTML
+    }
+    else if(!(Name.value == "" || year.value == "")){
+        url.innerText = `https://localhost:8080/?name=${Name.value}&year=${year.value}`
     }
     else if(Name.value != "" || year.value == ""){
-        url.append(`?name=${Name.value}`);
+        url.innerText = `https://localhost:8080/?name=${Name.value}`
     }
     else if(Name.value == "" || year.value != ""){
-        url.append(`?year=${year.value}`)
+        url.innerHTML = `https://localhost:8080/?year=${year.value}`
     }
 
-	Name.value = ""
-	year.value = ""
+    Name.value = ""
+    year.value = ""
 })
 
 
