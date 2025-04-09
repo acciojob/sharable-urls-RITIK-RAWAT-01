@@ -2,12 +2,10 @@
 let Name = document.getElementById('name')
 let year = document.getElementById('year')
 let button = document.getElementById('button')
-console.log(button)
 let url = document.getElementById('url')
 
 
-button.addEventListener("click" , () => {
-
+function Shareble_url(){
     if(Name.value == "" && year.value == ""){
         url.innerHTML
     }
@@ -23,8 +21,8 @@ button.addEventListener("click" , () => {
 
     Name.value = ""
     year.value = ""
-})
+}
 
-
+button.addEventListener('click',Shareble_url)
 
 
