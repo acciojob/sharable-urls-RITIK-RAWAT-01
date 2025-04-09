@@ -17,4 +17,11 @@ button.addEventListener("click" , () => {
     else if(Name.value == "" || year.value != ""){
         url.append(`?year=${year.value}`)
     }
+
+	Name.value = ""
+	year.value = ""
 })
+
+
+
+
