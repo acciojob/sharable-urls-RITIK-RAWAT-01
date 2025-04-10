@@ -6,16 +6,15 @@ let url = document.getElementById('url')
 
 
 function Shareble_url(){
-    if(Name.value == "" && year.value == ""){
-        url.innerHTML
-    }
-    else if(!(Name.value == "" || year.value == "")){
+    if(Name.value && year.value){
         url.innerText = `https://localhost:8080/?name=${Name.value}&year=${year.value}`
     }
-    else if(Name.value != "" || year.value == ""){
+    
+    else if(Name.value){
         url.innerText = `https://localhost:8080/?name=${Name.value}`
     }
-    else if(Name.value == "" || year.value != ""){
+    
+    else if(year.value){
         url.innerHTML = `https://localhost:8080/?year=${year.value}`
     }
 
@@ -23,6 +22,8 @@ function Shareble_url(){
     year.value = ""
 }
 
+
 button.addEventListener('click',Shareble_url)
+
 
 
